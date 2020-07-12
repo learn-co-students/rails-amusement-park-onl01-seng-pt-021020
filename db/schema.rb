@@ -10,12 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_09_153321) do
+ActiveRecord::Schema.define(version: 2020_07_09_155719) do
 
   create_table "attractions", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "tickets"
+    t.integer "nausea_rating"
+    t.integer "happiness_rating"
+    t.integer "min_height"
   end
 
   create_table "rides", force: :cascade do |t|
@@ -30,6 +34,11 @@ ActiveRecord::Schema.define(version: 2020_07_09_153321) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "nausea"
+    t.integer "happiness"
+    t.integer "tickets"
+    t.integer "height"
+    t.boolean "admin", default: false
   end
 
 end
