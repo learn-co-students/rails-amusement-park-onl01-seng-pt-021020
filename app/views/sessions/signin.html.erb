@@ -1,0 +1,13 @@
+<h1> Log In </h1>
+<%= form_for :user, url: '/signin' do |f| %>
+    <%= f.label "Your name: " %><br>
+    <%= f.collection_select :name, User.all, :name, :name %>
+    <br>
+    <br>
+
+    <%= label_tag :user_password, "Your password: " %><br>
+    <%= f.password_field :password, id: "password" %>
+    <br>
+    <br>
+    <%= f.submit "Sign In" %>
+<% end %>

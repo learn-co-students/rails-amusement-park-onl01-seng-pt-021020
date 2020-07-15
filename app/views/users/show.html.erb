@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+<h1><%= "ADMIN" if @user[:admin] %></h1>
+<p>Name: <%= @user.name %></p>
+<p>Tickets: <%= @user.tickets %></p>
+<p>Mood: <%= @user.mood if @user[:happiness] && @user[:nausea] %></p>
+<p>Height: <%= @user.height %></p>
+<%= link_to "See attractions", attractions_path %>
