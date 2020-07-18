@@ -1,0 +1,9 @@
+<h1>Attractions</h1>
+
+<ul>
+  <% @attractions.each do |a| %>
+  <li>
+    <%= link_to "#{tag} #{a.name}", a %>
+  </li>
+  <% end %>
+</ul>
