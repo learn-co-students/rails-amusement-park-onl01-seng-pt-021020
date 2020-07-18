@@ -1,0 +1,10 @@
+<%= form_for :user do |f| %>
+
+  <%= f.label :name, "Your name:"%>
+  <%= f.collection_select :name, @users, :name, :name, :prompt => "Please select your username from this dropdown" %> <br><br>
+
+  <%= f.label :password, "Your password:" %><br>
+  <%= f.password_field :password %><br><br>
+
+  <%= f.submit "Sign In"%>
+<% end %>
